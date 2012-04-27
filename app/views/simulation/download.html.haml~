@@ -1,0 +1,20 @@
+%legend
+  %h1
+    .inner-title
+      Look up result
+ %br/
+ .control-group
+      %label.control-label
+        Choose a cluster
+      .controls
+- if @result_judge == true 
+  = form_tag  'download_result' 
+    = label_tag "your job Name is #{@job_name}" 
+    = submit_tag "Click To Download Your Result" 
+- else 
+  %h2
+    There is No Job finished In 
+  = "User Name #{@user_name}"
+  %br/
+  = "Job Name  #{job_name}" 
+  %br/

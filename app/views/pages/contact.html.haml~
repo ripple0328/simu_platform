@@ -1,0 +1,11 @@
+.row-fluid
+  .span12
+    .hero-unit
+      %legend
+        %h1
+          .inner-title
+            Contact Information 
+      %br/
+      %p 
+        Any usage problem please feel comfortable to contact me 
+        = mail_to  "zhang.qingbo@zte.com.cn", "Mail Me", :class => "btn btn-large btn-primary"

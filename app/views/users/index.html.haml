@@ -1,0 +1,30 @@
+%h1
+  .inner-title
+    All users Listed Here
+%br/
+%table.table.table-striped.table-bordered.table-condensed
+  %thead
+    %tr
+      %th 
+        %h3
+          %strong
+            Photo
+      %th
+        %h3
+          %strong
+            Name
+      - if current_user.admin? 
+        %th
+          %h3
+            %strong
+              Delete
+        %th
+          %h3
+            %strong
+              Authenticate
+      %th
+        %h3
+          %strong
+            Status
+  %tbody
+    = render @users

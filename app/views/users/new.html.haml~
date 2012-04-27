@@ -1,0 +1,31 @@
+.row-fluid
+  .span12
+    .hero-unit
+      = form_for(@user,:html => {:class =>'form-horizontal'}) do |f|
+        %fieldset
+          %legend
+            %h1
+              .inner-title
+                Sign up and wait for Authorization
+          = render 'shared/error_messages', :object => f.object
+          .control-group
+            = f.label :name,:class => 'control-label'
+            .controls
+              = f.text_field :name,:class => "input-middle"
+          .control-group
+            = f.label :email,:class => 'control-label'
+            .controls
+              = f.text_field :email,:class => "input-middle"
+          .control-group
+            = f.label :password,:class => 'control-label'
+            .controls
+              = f.password_field :password,:class => "input-middle"
+          .control-group
+            = f.label :password_confirmation,:class => 'control-label'
+            .controls
+              = f.password_field :password_confirmation,:class => "input-middle"
+          .control-group
+            %label.control-label
+              Sign Up
+            .controls
+              = f.submit "SignUp", :class =>'btn btn-primary'

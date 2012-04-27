@@ -1,0 +1,14 @@
+- if object.errors.any?
+  #error_explanation.alert.alert-error
+    /%h3
+    /  = pluralize(object.errors.count, "error")
+    /  prohibited this
+    /  = object.class.to_s.underscore.humanize.downcase
+    /  from being saved
+    %p
+      下面这几栏目有问题请检查：
+    %ul
+      - object.errors.full_messages.each do |msg| 
+        %li
+          = msg
+- remove_sensitive_error_messages_from_user(@user)

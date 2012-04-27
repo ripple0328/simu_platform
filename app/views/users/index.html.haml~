@@ -1,0 +1,29 @@
+%h1
+  .inner-title
+    All users Listed Here
+%br/
+%table.table.table-striped.table-bordered.table-condensed
+  %thead
+    %tr
+      %th 
+        %h3
+          %strong
+            Photo
+      %th
+        %h3
+          %strong
+            Name
+      %th
+        %h3
+          %strong
+            Delete
+      %td
+        %h3
+          %strong
+            Authenticate
+      %td
+        %h3
+          %strong
+            Status
+  %tbody
+    = render @users

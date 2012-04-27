@@ -1,0 +1,38 @@
+%tr
+  %td
+    = gravatar_for user, :size => 40
+  %td
+    - if current_user.admin? 
+      = link_to user do
+        %h4
+          %em.pull-left
+            = user.name
+    - else
+      %h4
+        %em.pull-left
+          = user.name
+  - if current_user.admin? 
+    %td
+      = link_to  "delete", user,
+        :confirm => "are you sure?",
+        :method => :delete,
+        :class => "btn btn-danger"
+    - if  user.auth?
+      %td
+        = link_to "Unauth",auth_user_path(user),	
+          :confirm =>"are you sure?",
+          :method => :post,
+          :class => "btn btn-inverse"
+    - else 
+      %td
+        = link_to "auth",auth_user_path(user),
+          :confirm => "are you sure", 
+          :method => :post,
+          :class => "btn btn-success"
+  %td
+    - if  user.auth?
+      %span.label.label-success
+        has Auth
+    - else 
+      %span.label
+        Not Auth

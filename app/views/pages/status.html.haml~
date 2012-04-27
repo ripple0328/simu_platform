@@ -1,0 +1,9 @@
+.row-fluid
+  .span12
+    .hero-unit
+      %legend
+        %h1
+          .inner-title
+            Jobmanager Status
+      %br/
+      = render 'shared/status'

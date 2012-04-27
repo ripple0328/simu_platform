@@ -1,0 +1,31 @@
+%legend
+  %h1
+    .inner-title
+      Look up result
+%br/
+- if @result_judge == true 
+  = form_tag('download_result',:class =>'form-horizontal') do
+    .control-group
+      %label.control-label
+        your job name
+      .controls
+        ="#{@job_name}" 
+    .control-group
+      %label.control-label
+        Download result
+      .controls
+        = submit_tag "Download",:class =>'btn btn-primary'
+- else 
+  %h2
+    There is No Job finished In 
+    .control-group
+      %label.control-label
+        User Name:
+      .controls
+        = "  #{@user_name}"
+    .control-group
+      %label.control-label
+        Job Name:
+      .controls
+        = "  #{@job_name}"
+

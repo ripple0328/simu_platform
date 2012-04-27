@@ -1,0 +1,38 @@
+%legend
+  %h1
+    .inner-title
+      Profile information
+.row-fluid
+  .span8
+    %table.table.table-striped.table-bordered.table-condensed
+      %thead
+        %tr
+          %th
+            %h3
+              %strong
+                Name
+          %td
+            %h3
+              %em
+                = @user.name   
+        %tr
+          %th
+            %h3
+              %strong
+                Email
+          %td
+            %h3
+              %em
+                = link_to @user.email, @user 
+        %tr
+          %th
+            %h3
+              %strong
+                Other
+          %td
+            %h3
+              %em
+                /....                       
+  .span4
+    = gravatar_for(@user,:size => 105)  
+        

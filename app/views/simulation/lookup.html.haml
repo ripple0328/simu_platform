@@ -1,0 +1,24 @@
+%legend
+  %h1
+    .inner-title
+      Look up Your job result
+%br/
+= form_tag('simulation/download',:class =>'form-horizontal') do 
+  .control-group
+    %label.control-label      	
+      Job Name
+    .controls
+      = text_field_tag 'job_name'
+  .control-group
+    %label.control-label
+      Choose a cluster
+    .controls
+      = radio_button_tag('cluster', 'jm_c', checked = true)
+      JM-C cluster
+      = radio_button_tag('cluster', 'jm_u', checked = false)
+      JM-U cluster
+  .control-group
+    %label.control-label
+      Goto The Result
+    .controls  
+      = submit_tag "Go...",:class =>'btn btn-primary'

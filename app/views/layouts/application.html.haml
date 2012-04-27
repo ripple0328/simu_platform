@@ -1,0 +1,36 @@
+!!! 5
+%html
+  %head
+    = render 'layouts/head'
+  %body
+    #header
+      .row-fluid
+        .span2
+          %i
+            = link_to logo, root_path
+        .span8
+          %h1
+            System Simulation Department
+    .container-fluid
+      .row-fluid#body
+        .span12
+          .span2#nav
+            = render 'layouts/header'
+          .span10
+            - flash.each do |key, value|
+              %div{:class => "alert alert-#{key}"} 
+                = value
+            .row-fluid
+              .span12
+                .hero-unit
+                  = yield
+    %footer
+      %section
+        #footer
+      %section.debug
+        %hr/
+        .alert.alert-block
+          %h2
+            %em
+              Debug Information
+          = debug(params) if Rails.env.development?

@@ -1,0 +1,133 @@
+// 使用了部分bourbon的函数来简化书写
+// 为什么用bourbon不用compass
+// http://robots.thoughtbot.com/post/7846399901/introducing-bourbon-sass-mixins
+@import "bourbon";
+
+// 用来定义链接颜色
+$linkColor: green;
+
+// 这部分用来定义logo那一栏的字体，大小等
+$logo-size: 36pt;
+$font-math: 'mathematica7';
+//$font-math: 'lucida handwriting';
+
+#header {
+  background-color: #555;
+  padding: 15px 100px;
+  @include linear-gradient(#888, #FFF);
+  @include box-shadow(0 0 6px 3px #999);
+  margin: 0px 0px 50px 0px;
+  padding: 15px 12px;
+  .row-fluid{
+    .span2{
+      margin: 0px 0px 0px 50px;
+      i{
+      opacity: 0.6;
+      }
+    }
+    .span8{
+      margin: 15px 0px 0px 20px;   
+      h1{
+        font-size: $logo-size;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: $font-math;  
+        text-shadow: 5px 3px 3px #999;
+      }
+    }
+  }
+}
+
+
+// 下面两部分用来定义首页sign up按钮
+#button-color {
+	font-size:40px;	
+	color: #000;
+}
+
+#sign-up-button {
+	color: #000;
+	background:#00802B;
+	width: 260px;
+	height: 50px;
+  padding: 30px 0px 0px 30px;
+  margin: 0 auto;
+	left: 150px;
+	@include border-radius(15px);
+	@include linear-gradient(#00A02A, #005015);
+	@include box-shadow(3px 3px 2px  rgba(0, 0, 0, .4));
+  
+  a{
+    @include transition (all 1s ease-in-out);
+    text-shadow: 3px 1px 1px #665;
+    opacity: 0.9;   
+  }
+  a:hover {
+    @include transform(scale(1.2) translateX(20px) translateY(10px));
+    text-decoration:none;
+    color: #dc692e;
+  }
+}
+
+// 每一部分主页面上面的大标题
+h1 {
+	.inner-title {
+		font-size: 30px ;	
+		font-family: 'New Century Schoolbook','Consolas';
+		font-style: italic;
+	}
+}
+
+// 定义导航栏边框和主页面上面的缩进等
+#body {
+  .span12 {
+    #nav {
+      border-style: groove;
+      margin: 0px 0px 0px 40px;
+      padding: 10px 20px 20px 10px;
+      @include border-top-left-radius(25px);
+      @include border-bottom-right-radius(25px);
+      li a{
+        @include transition (all 1s ease-in-out);
+        text-shadow: 1px 1px 1px #bbb;
+        opacity: 0.9;      
+      }
+
+      li a:hover {
+        @include transform(scale(1.2) translateX(6px) translateY(2px)) ;
+        //width: 95%;
+        color: #dc692e;
+        //background: #EEE;
+        background: #ababa2;
+        background: rgba(240, 230, 200, .9);
+        @include border-top-left-radius(12px);
+        @include border-bottom-right-radius(12px);
+        text-shadow: 0px 0px 0px #fff;
+        font-style: oblique;
+        font-weight: bold;
+      }
+    }
+    .span10 {
+      margin: 0px 0px 0px 30px;
+    }
+  }  
+}
+#container-plot {
+  width: 400px; 
+  height: 400px; 
+  margin: 0;
+}
+
+#maps {
+  width: 650px; 
+  height: 400px; 
+  margin: 0px 0px 0px 0px;  
+}
+
+footer section #footer {
+  background: url('footer_bg.jpg');
+}
+
+// 主框架都是用bootstrap，需要gem里面添加sass-bootstrap
+@import "bootstrap";
+
