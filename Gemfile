@@ -4,7 +4,6 @@ gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
 
 
@@ -22,7 +21,7 @@ group :assets do
 end
 
 
-
+gem 'puma'
 gem 'jquery-rails'
 
 gem 'haml'
