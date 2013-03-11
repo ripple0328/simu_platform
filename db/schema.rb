@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20110921014747) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.boolean  "admin",           :default => false
     t.boolean  "auth"
   end

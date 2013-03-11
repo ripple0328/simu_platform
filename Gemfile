@@ -1,12 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'pg'
-
-
 gem 'gravatar_image_tag'
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,17 +14,19 @@ group :assets do
   gem 'uglifier'
 end
 
+group :test do 
+  gem 'sqlite3'
+end
 
-gem 'puma'
+group :production do 
+  gem 'pg'
+end
+# gem 'puma'
+gem 'foreman'
 gem 'jquery-rails'
-
 gem 'haml'
-
 gem 'bcrypt-ruby'
-
 gem 'bourbon'
-
-gem 'heroku'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
