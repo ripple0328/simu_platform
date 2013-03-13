@@ -21,7 +21,7 @@ end
 group :production do 
   gem 'pg'
 end
-# gem 'puma'
+gem 'puma'
 gem 'foreman'
 gem 'jquery-rails'
 gem 'haml'

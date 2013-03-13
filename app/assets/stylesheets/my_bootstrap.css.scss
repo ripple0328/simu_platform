@@ -53,7 +53,7 @@ $font-math: 'mathematica7';
   padding: 30px 0px 0px 30px;
   margin: 0 auto;
 	left: 150px;
-	@include border-radius(15px);
+	border-radius: 15px;
 	@include linear-gradient(#00A02A, #005015);
 	@include box-shadow(3px 3px 2px  rgba(0, 0, 0, .4));
   
@@ -85,8 +85,8 @@ h1 {
       border-style: groove;
       margin: 0px 0px 0px 40px;
       padding: 10px 20px 20px 10px;
-      @include border-top-left-radius(25px);
-      @include border-bottom-right-radius(25px);
+      border-top-left-radius: 25px;
+      border-bottom-right-radius: 25px;
       li a{
         @include transition (all 1s ease-in-out);
         text-shadow: 1px 1px 1px #bbb;
@@ -100,8 +100,8 @@ h1 {
         //background: #EEE;
         background: #ababa2;
         background: rgba(240, 230, 200, .9);
-        @include border-top-left-radius(12px);
-        @include border-bottom-right-radius(12px);
+        border-top-left-radius: 12px;
+        border-bottom-right-radius: 12px;
         text-shadow: 0px 0px 0px #fff;
         font-style: oblique;
         font-weight: bold;
