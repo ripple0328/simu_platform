@@ -1,4 +1,4 @@
-class PlotController < ApplicationController
+ffclass PlotController < ApplicationController
   def index
   end
 end

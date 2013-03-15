@@ -13,17 +13,15 @@
             System Simulation Department
     .container-fluid
       .row-fluid#body
-        .span12
-          .span2#nav
-            = render 'layouts/header'
-          .span10
-            - flash.each do |key, value|
-              %div{:class => "alert alert-#{key}"} 
-                = value
-            .row-fluid
-              .span12
-                .hero-unit
-                  = yield
+        .span2#nav
+          = render 'layouts/header'
+        .span6
+          - flash.each do |key, value|
+            %div{:class => "alert alert-#{key}"} 
+              = value
+          .row-fluid
+            .hero-unit
+              = yield
     %footer
       %section
         #footer

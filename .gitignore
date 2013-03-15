@@ -13,6 +13,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
+/#*#
+/*~
 /tmp/*
 /.env
+/.idea/.generators
+/.idea/.rakeTasks
+/db/migrate/#20110920011653_create_users.rb#
+/log/#development.log#
